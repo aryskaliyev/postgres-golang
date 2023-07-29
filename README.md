@@ -26,17 +26,26 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
 ---
 
 #### Installation
-- To install **gorm** orm:
+- Installing **gorm** orm:
     ```
     go get gorm.io/gorm
     ```
-- To install **sqlx** extension:
+- Installing **sqlx** extension:
     ```
     go get github.com/jmoiron/sqlx
     ```
-- To install **pq** sql driver:
+- Installing **pq** sql driver:
     ```
     go get github.com/lib/pq
     ```
-
+- Installing **postgres** db:
+    - On Ubuntu:
+    ```
+    sudo apt-get update
+    sudo apt-get install postgresql
+    ```
+    - In Docker:
+    ```
+    Some commands..
+    ```
 ---
