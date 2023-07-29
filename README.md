@@ -15,8 +15,10 @@ Working with databases in golang the following:
 
 > GORM is an ORM library that simplifies database interactions in Go applications. It works in conjunction with the generic interface(**database/sql** package) and SQL drivers to provide a more intuitive and object-oriented approach to database management.
 
-- **sqlx** is a package that extends the capabilities of the **database/sql** package (third-party package). It provides a set of utility functions to work with SQL databases more conveniently. How?
+- **sqlx** is a package (versatile extension) that extends the capabilities of the **database/sql** package (third-party package). It provides a set of **utility functions** to work with SQL databases more conveniently. How?
 
 - **pq** package (sql driver) is specific to PostgreSQL and offers additional features and optimizations for working with PostgreSQL databases.
 
 These package enable to **connect**, **query** and **manage** SQL databases efficiently.
+
+![Simple Diagram](sql-go.png)
