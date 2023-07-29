@@ -22,3 +22,20 @@ Working with databases in golang the following:
 These package enable to **connect**, **query** and **manage** SQL databases efficiently.
 
 ![Simple Diagram](sql-go.png)
+---
+
+#### Installation
+- To install **gorm** orm:
+    ```
+    go get gorm.io/gorm
+    ```
+- To install **sqlx** extension:
+    ```
+    go get github.com/jmoiron/sqlx
+    ```
+- To install **pq** sql driver:
+    ```
+    go get github.com/lib/pq
+    ```
+
+---
