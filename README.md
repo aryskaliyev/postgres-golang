@@ -22,6 +22,7 @@ Working with databases in golang the following:
 These package enable to **connect**, **query** and **manage** SQL databases efficiently.
 
 ![Simple Diagram](sql-go.png)
+
 ---
 
 #### Installation
