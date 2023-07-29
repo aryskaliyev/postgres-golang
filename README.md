@@ -44,6 +44,10 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     sudo apt-get update
     sudo apt-get install postgresql
     ```
+    - On MacOS:
+    ```
+    Some commands..
+    ```
     - In Docker:
     ```
     Some commands..
