@@ -55,3 +55,28 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     Some commands..
     ```
 ---
+
+#### Instructions
+- Pull pre-built postgres docker image from Docker Hub:
+    ```
+    docker pull postgres
+    ```
+- Run container with postgres docker image:
+    ```
+    docker run\
+    --name postgres-container\
+    -e POSTGRES_PASSWORD=<password>\
+    -e POSTGRES_DB=<db_name>\
+    -d\
+    -p 5432:5432\
+    postgres
+    ```
+- Run container with psql client:
+    ```
+    docker run\
+    --name psql-container\
+    --link postgres-container:postgres\
+    -it postgres\
+    psql -h postgres\
+    -U postgres
+    ```
