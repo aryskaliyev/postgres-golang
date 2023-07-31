@@ -19,7 +19,7 @@ Working with databases in golang:
 
 - **pq** package (sql driver) is specific to PostgreSQL and offers additional features and optimizations for working with PostgreSQL databases.
 
-- **psql** is the command-line interface for PostrgreSQL, a powerful relationanl database management system.
+- **psql** is the command-line interface for PostrgreSQL, a powerful relational database management system.
 
 These package enable to **connect**, **query** and **manage** SQL databases efficiently.
 
