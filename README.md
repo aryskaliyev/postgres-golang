@@ -1,6 +1,6 @@
 #### Instructions
 
-Working with databases in golang the following:
+Working with databases in golang:
 - **database/sql** package is part of Go standard library. It provides **generic interface** to interact with SQL databases. It allows the use of any sql database that **implements the database/sql interface**. It serves as a fundamental **abstraction layer**.
 
 - **SQL drivers** are third-party packages that implement the **database/sql** interface for specifig SQL database systems like MySQL, PostgreSQL, SQLite etc..
