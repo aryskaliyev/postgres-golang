@@ -9,4 +9,4 @@ docker run --name postgres-container -e POSTGRES_USER=postgres_user -e POSTGRES_
 docker run --name psql-container\
 	--link postgres-container:postgres\ # docker container and image 
 	-it postgres\ # image
-	 psql -h postgres -U postgres_user postgres_db
+	psql -h postgres -U postgres_user postgres_db
