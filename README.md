@@ -80,3 +80,11 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     psql -h postgres\
     -U postgres
     ```
+---
+#### To install python and pip in docker
+```
+docker run -it python /bin/bash
+apt-get update
+apt-get install -y python3-pip
+pip --version
+```
