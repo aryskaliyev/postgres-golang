@@ -63,23 +63,24 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     ```
 - Run container with postgres docker image:
     ```
-    docker run\
-    --name postgres-container\
-    -e POSTGRES_USER=<user>\
-    -e POSTGRES_PASSWORD=<password>\
-    -e POSTGRES_DB=<db_name>\
+    docker run \
+    --name postgres-container \
+    -e POSTGRES_USER=<user> \
+    -e POSTGRES_PASSWORD=<password> \
+    -e POSTGRES_DB=<db_name> \
+    -v /path/to/scripts:/docker-entrypoint-initdb.d \
     -d\
     -p 5432:5432\
     postgres
     ```
 - Run container with psql client:
     ```
-    docker run\
-    --name psql-container\
-    --link postgres-container:postgres\
-    -it postgres\
-    psql -h postgres\
-    -U postgres_user postgres_db
+    docker run \
+    --name psql-container \
+    --link postgres-container:postgres \
+    -it postgres \
+    psql -h postgres \
+    -U <user> <db_name>
     ```
 ---
 #### To install python and pip in docker
