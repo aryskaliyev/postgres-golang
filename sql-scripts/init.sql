@@ -1,8 +1,9 @@
 CREATE TABLE location (
   location_id SERIAL PRIMARY KEY,
   city VARCHAR(50) UNIQUE NOT NULL,
-  region VARCHAR(50) UNIQUE NOT NULL,
-  country VARCHAR(50) UNIQUE NOT NULL
+  region VARCHAR(50) NOT NULL,
+  country VARCHAR(50) NOT NULL
+
 );
 
 CREATE TABLE exam (
@@ -10,6 +11,8 @@ CREATE TABLE exam (
   name  VARCHAR(100) UNIQUE NOT NULL,
   short_name VARCHAR(10) UNIQUE NOT NULL
 );
+
+CREATE TYPE user_status AS ENUM ('active', 'suspended', 'banned');
 
 CREATE TABLE subject (
   subject_id SERIAL PRIMARY KEY,
@@ -28,8 +31,6 @@ CREATE TABLE topic (
   module_id INT NOT NULL REFERENCES module (module_id),
   name VARCHAR(100) UNIQUE NOT NULL
 );
-
-CREATE TYPE user_status AS ENUM ('active', 'suspended', 'banned');
 
 CREATE TABLE useraccount (
   user_id SERIAL PRIMARY KEY,
@@ -114,3 +115,29 @@ CREATE TABLE admin (
   email VARCHAR(255) UNIQUE NOT NULL,
   passhash VARCHAR(64) NOT NULL
 );
+
+INSERT INTO location (city, region, country) VALUES ('astana', 'astana city', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('almaty', 'almaty city', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('shymkent', 'shymkent city', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('kokshetau', 'akmola region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('aktobe', 'aktobe region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('atyrau', 'atyrau region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('aksai', 'west kazakhstan region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('oral', 'west kazakhstan region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('oskemen', 'east kazakhstan region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('taraz', 'zhambyl region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('karaganda', 'karaganda region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('temirtau', 'karaganda region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('kostanay', 'kostanay region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('kyzylorda', 'kyzylorda region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('aktau', 'mangystau region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('pavlodar', 'pavlodar region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('yekibastuz', 'pavlodar region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('petropavlovsk', 'north kazakhstan region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('turkestan', 'turkestan region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('semey', 'abay region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('taldykorgan', 'zhetysu region', 'kazakhstan');
+INSERT INTO location (city, region, country) VALUES ('zhezkazgan', 'ulytau region', 'kazakhstan');
+INSERT INTO exam (name, short_name) VALUES ('nazarbayev university entrance test', 'nuet');
+INSERT INTO subject (name, short_name) VALUES ('mathematics', 'math');
+INSERT INTO subject (name, short_name) VALUES ('critical thinking and problem solving', 'ct&ps');

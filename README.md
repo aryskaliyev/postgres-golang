@@ -69,8 +69,8 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     -e POSTGRES_PASSWORD=<password> \
     -e POSTGRES_DB=<db_name> \
     -v /path/to/scripts:/docker-entrypoint-initdb.d \
-    -d\
-    -p 5432:5432\
+    -d \
+    -p 5432:5432 \
     postgres
     ```
 - Run container with psql client:
