@@ -65,6 +65,7 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     ```
     docker run\
     --name postgres-container\
+    -e POSTGRES_USER=<user>\
     -e POSTGRES_PASSWORD=<password>\
     -e POSTGRES_DB=<db_name>\
     -d\
@@ -78,7 +79,7 @@ These package enable to **connect**, **query** and **manage** SQL databases effi
     --link postgres-container:postgres\
     -it postgres\
     psql -h postgres\
-    -U postgres
+    -U postgres_user postgres_db
     ```
 ---
 #### To install python and pip in docker
