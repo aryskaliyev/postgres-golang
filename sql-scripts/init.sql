@@ -190,3 +190,14 @@ INSERT INTO topic (module_id, name) VALUES (2, 'growth and decay');
 INSERT INTO topic (module_id, name) VALUES (2, 'direct and inverse proportion');
 INSERT INTO topic (module_id, name) VALUES (2, 'compare lengths, areas and volumes');
 INSERT INTO topic (module_id, name) VALUES (2, 'miscellaneous');
+
+INSERT INTO topic (module_id, name) VALUES (5, 'identifying the main conclusion');
+INSERT INTO topic (module_id, name) VALUES (5, 'detecting reasoning errors');
+INSERT INTO topic (module_id, name) VALUES (5, 'drawing a conclusion');
+INSERT INTO topic (module_id, name) VALUES (5, 'identifying an assumption');
+INSERT INTO topic (module_id, name) VALUES (5, 'assessing the impact of additional evidence');
+INSERT INTO topic (module_id, name) VALUES (5, 'matching arguments');
+INSERT INTO topic (module_id, name) VALUES (5, 'applying principles');
+
+INSERT INTO topic (module_id, name) VALUES (6, 'problem solving category');
+
