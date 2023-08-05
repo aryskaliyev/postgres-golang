@@ -138,6 +138,55 @@ INSERT INTO location (city, region, country) VALUES ('turkestan', 'turkestan reg
 INSERT INTO location (city, region, country) VALUES ('semey', 'abay region', 'kazakhstan');
 INSERT INTO location (city, region, country) VALUES ('taldykorgan', 'zhetysu region', 'kazakhstan');
 INSERT INTO location (city, region, country) VALUES ('zhezkazgan', 'ulytau region', 'kazakhstan');
+
 INSERT INTO exam (name, short_name) VALUES ('nazarbayev university entrance test', 'nuet');
-INSERT INTO subject (name, short_name) VALUES ('mathematics', 'math');
-INSERT INTO subject (name, short_name) VALUES ('critical thinking and problem solving', 'ct&ps');
+
+INSERT INTO subject (exam_id, name) VALUES (1, 'mathematics');
+INSERT INTO subject (exam_id, name) VALUES (1, 'critical thinking and problem solving');
+
+INSERT INTO module (subject_id, name) VALUES (1, "numbers");
+INSERT INTO module (subject_id, name) VALUES (1, "ratio and proportion");
+INSERT INTO module (subject_id, name) VALUES (1, "algebra");
+INSERT INTO module (subject_id, name) VALUES (1, "geometry");
+
+INSERT INTO module (subject_id, name) VALUES (2, "critical thinking");
+INSERT INTO module (subject_id, name) VALUES (2, "problem solving");
+
+INSERT INTO topic (module_id, name) VALUES (1, 'binary operations');
+INSERT INTO topic (module_id, name) VALUES (3, 'inequalities');
+INSERT INTO topic (module_id, name) VALUES (3, 'simultaneous equations');
+INSERT INTO topic (module_id, name) VALUES (3, 'mixed simple');
+INSERT INTO topic (module_id, name) VALUES (3, 'evaluate formula or expression with given numerical values');
+INSERT INTO topic (module_id, name) VALUES (3, 'evaluate expressions with numerical values');
+INSERT INTO topic (module_id, name) VALUES (3, 're-arranging formulae or expression');
+INSERT INTO topic (module_id, name) VALUES (3, 'quadratic equations');
+INSERT INTO topic (module_id, name) VALUES (3, 'bearings');
+INSERT INTO topic (module_id, name) VALUES (3, 'trigonometry');
+INSERT INTO topic (module_id, name) VALUES (3, 'simultaneous linear equations');
+INSERT INTO topic (module_id, name) VALUES (3, 'sets and venn diagrams');
+INSERT INTO topic (module_id, name) VALUES (1, 'probability');
+INSERT INTO topic (module_id, name) VALUES (1, 'listing strategies');
+INSERT INTO topic (module_id, name) VALUES (3, 'simplifying algebraic expressions');
+INSERT INTO topic (module_id, name) VALUES (3, 'functions and graphs');
+INSERT INTO topic (module_id, name) VALUES (4, 'sectors, segments and arcs');
+INSERT INTO topic (module_id, name) VALUES (3, 'equation of a straight line');
+INSERT INTO topic (module_id, name) VALUES (3, 'choose from statements');
+INSERT INTO topic (module_id, name) VALUES (4, 'surface area and volume');
+INSERT INTO topic (module_id, name) VALUES (4, 'triangles');
+INSERT INTO topic (module_id, name) VALUES (4, 'polygons');
+INSERT INTO topic (module_id, name) VALUES (4, 'prisms, cubes and cuboids');
+INSERT INTO topic (module_id, name) VALUES (3, 'sequences');
+INSERT INTO topic (module_id, name) VALUES (3, 'progressions');
+INSERT INTO topic (module_id, name) VALUES (4, 'cylinders, cones, pyramids and spheres');
+INSERT INTO topic (module_id, name) VALUES (3, 'other equations');
+INSERT INTO topic (module_id, name) VALUES (4, 'circles');
+INSERT INTO topic (module_id, name) VALUES (4, 'composite shapes and composite solids');
+INSERT INTO topic (module_id, name) VALUES (4, 'quadrilaterals');
+INSERT INTO topic (module_id, name) VALUES (3, 'statistics');
+INSERT INTO topic (module_id, name) VALUES (3, 'polynomial division');
+INSERT INTO topic (module_id, name) VALUES (2, 'apply ratio to contexts and problems');
+INSERT INTO topic (module_id, name) VALUES (2, 'percentage and percentage change');
+INSERT INTO topic (module_id, name) VALUES (2, 'growth and decay');
+INSERT INTO topic (module_id, name) VALUES (2, 'direct and inverse proportion');
+INSERT INTO topic (module_id, name) VALUES (2, 'compare lengths, areas and volumes');
+INSERT INTO topic (module_id, name) VALUES (2, 'miscellaneous');
