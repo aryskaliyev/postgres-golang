@@ -144,13 +144,13 @@ INSERT INTO exam (name, short_name) VALUES ('nazarbayev university entrance test
 INSERT INTO subject (exam_id, name) VALUES (1, 'mathematics');
 INSERT INTO subject (exam_id, name) VALUES (1, 'critical thinking and problem solving');
 
-INSERT INTO module (subject_id, name) VALUES (1, "numbers");
-INSERT INTO module (subject_id, name) VALUES (1, "ratio and proportion");
-INSERT INTO module (subject_id, name) VALUES (1, "algebra");
-INSERT INTO module (subject_id, name) VALUES (1, "geometry");
+INSERT INTO module (subject_id, name) VALUES (1, 'numbers');
+INSERT INTO module (subject_id, name) VALUES (1, 'ratio and proportion');
+INSERT INTO module (subject_id, name) VALUES (1, 'algebra');
+INSERT INTO module (subject_id, name) VALUES (1, 'geometry');
 
-INSERT INTO module (subject_id, name) VALUES (2, "critical thinking");
-INSERT INTO module (subject_id, name) VALUES (2, "problem solving");
+INSERT INTO module (subject_id, name) VALUES (2, 'critical thinking');
+INSERT INTO module (subject_id, name) VALUES (2, 'problem solving');
 
 INSERT INTO topic (module_id, name) VALUES (1, 'binary operations');
 INSERT INTO topic (module_id, name) VALUES (3, 'inequalities');
@@ -201,3 +201,10 @@ INSERT INTO topic (module_id, name) VALUES (5, 'applying principles');
 
 INSERT INTO topic (module_id, name) VALUES (6, 'problem solving category');
 
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (1, 'hashirama', 'senju', 'hashirama.senju', 'hashirama.senju@gmail.com', 'firsthokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (2, 'tobirama', 'senju', 'tobirama.senju', 'tobirama.senju@gmail.com', 'secondhokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (3, 'hiruzen', 'sarutobi', 'hiruzen.sarutobi', 'hiruzen.sarutobi@gmail.com', 'thirdhokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (4, 'minato', 'namikaze', 'minato.namikaze', 'minato.namikaze@gmail.com', 'fourthhokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (5, 'tsunade', 'senju', 'tsunade.senju', 'tsunade.senju@gmail.com', 'fifthhokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (6, 'kakashi', 'hatake', 'kakashi.hatake', 'kakashi.hatake@gmail.com', 'sixthhokage');
+INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (7, 'naruto', 'uzumaki', 'naruto.uzumaki', 'naruto.uzumaki@gmail.com', 'seventhhokage');
