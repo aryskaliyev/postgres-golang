@@ -68,7 +68,7 @@ CREATE TABLE round (
   round_id SERIAL PRIMARY KEY,
   event_id INT NOT NULL REFERENCES event (event_id),
   subject_id INT NOT NULL REFERENCES subject (subject_id),
-  round_sn INT UNIQUE NOT NULL,
+  round_sn INT NOT NULL,
   length INTERVAL NOT NULL,
   round_status event_or_round_status NOT NULL
 );
@@ -208,3 +208,22 @@ INSERT INTO useraccount (location_id, first_name, last_name, username, email, pa
 INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (5, 'tsunade', 'senju', 'tsunade.senju', 'tsunade.senju@gmail.com', 'fifthhokage');
 INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (6, 'kakashi', 'hatake', 'kakashi.hatake', 'kakashi.hatake@gmail.com', 'sixthhokage');
 INSERT INTO useraccount (location_id, first_name, last_name, username, email, passhash) VALUES (7, 'naruto', 'uzumaki', 'naruto.uzumaki', 'naruto.uzumaki@gmail.com', 'seventhhokage');
+
+CREATE OR REPLACE FUNCTION insert_into_round_table()
+RETURNS TRIGGER AS
+$$
+BEGIN
+  INSERT INTO round (event_id, subject_id, round_sn, length, round_status)
+  VALUES (NEW.event_id, 1, 1, INTERVAL '1 hour', 'active'),
+         (NEW.event_id, 2, 2, INTERVAL '1 hour', 'active');
+  RETURN NEW;
+END;
+$$
+LANGUAGE plpgsql;
+
+CREATE TRIGGER insert_round_data
+  AFTER INSERT ON event
+  FOR EACH ROW
+  EXECUTE FUNCTION insert_into_round_table();
+
+INSERT INTO event (exam_id, description, start_date, start_time, registration_deadline_date, registration_deadline_time, event_status, price) VALUES (1, 'First event of Unofficial NUET Mock Exam', '2023-08-07', '12:30:00', '2023-08-07', '10:30:00', 'active', 1000.00);
